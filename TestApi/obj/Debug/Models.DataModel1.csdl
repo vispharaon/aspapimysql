@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestdbModel" Alias="Self" d4p1:ViewGeneration="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:devart="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" annotation:UseStrongSpatialTypes="false" xmlns:d4p1="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TestdbEntities" annotation:LazyLoadingEnabled="true" ed:Guid="e30486f3-01fd-4417-90d8-879bc2b81fb3">
+    <EntitySet Name="Tests" EntityType="TestdbModel.Test" />
+  </EntityContainer>
+  <EntityType Name="Test" ed:Guid="b13fd357-1862-4d32-85c3-e36f28fd1cb3">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="43dcf60f-1868-4adb-8ea6-0d38320f96c0" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="9b886394-c99b-43ff-8bc3-90c8cacbc7c2" />
+    <Property Name="IsOk" Type="Byte" Nullable="false" ed:ValidateRequired="true" ed:Guid="39dda521-6560-46e6-a04d-654d67e8d13f" />
+  </EntityType>
+</Schema>
