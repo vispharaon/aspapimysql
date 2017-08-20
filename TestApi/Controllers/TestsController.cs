@@ -54,6 +54,9 @@ namespace TestApi.Controllers
         // DELETE: api/Tests/5
         public void Delete(int id)
         {
+            var test = _db.Tests.FirstOrDefault(x => x.Id == id);
+            if(test == null) throw new Exception($"No test with id: {id}");
+            _db.Tests.DeleteObject(test);
         }
     }
 }
